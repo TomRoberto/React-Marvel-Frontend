@@ -3,3 +3,7 @@
 .app {
   font-family: "roboto", sans-serif;
 }
+
+.hidden {
+  display: none;
+}

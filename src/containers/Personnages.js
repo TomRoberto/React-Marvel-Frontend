@@ -45,7 +45,7 @@ const Personnages = () => {
           />
         );
       })}
-      <FooterPages tab={tabNumberOfPages} setPage={setPage} />
+      <FooterPages tab={tabNumberOfPages} setPage={setPage} page={page} />
     </div>
   );
 };

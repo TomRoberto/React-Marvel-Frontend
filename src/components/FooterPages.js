@@ -1,9 +1,14 @@
-const FooterPages = ({ tab, setPage }) => {
+const FooterPages = ({ tab, setPage, page }) => {
   return (
     <div>
+      {page > 6 && <span>...</span>}
       {tab.map((elem, index) => {
         return (
           <button
+            className={
+              index < page - 6 || index > page + 4 ? "hidden" : "active-pages"
+            }
+            key={index}
             onClick={() => {
               setPage(index + 1);
             }}
@@ -12,6 +17,7 @@ const FooterPages = ({ tab, setPage }) => {
           </button>
         );
       })}
+      {page < 10 && <span>...</span>}
     </div>
   );
 };
