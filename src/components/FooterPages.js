@@ -1,4 +1,4 @@
-const FooterPages = ({ tab, setPage, page }) => {
+const FooterPages = ({ tab, setPage, page, numberOfPages }) => {
   return (
     <div>
       {page > 6 && <span>...</span>}
@@ -17,7 +17,7 @@ const FooterPages = ({ tab, setPage, page }) => {
           </button>
         );
       })}
-      {page < 10 && <span>...</span>}
+      {page < numberOfPages - 5 && <span>...</span>}
     </div>
   );
 };

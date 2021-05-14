@@ -5,6 +5,11 @@ import Personnages from "./containers/Personnages";
 import Comics from "./containers/Comics";
 import Favoris from "./containers/Favoris";
 import Personnage from "./containers/Personnage";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faHeart as farHeart } from "@fortawesome/free-regular-svg-icons";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+
+library.add(farHeart, faHeart);
 
 function App() {
   return (
