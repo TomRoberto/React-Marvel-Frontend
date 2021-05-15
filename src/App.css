@@ -21,6 +21,10 @@
   font-size: 20px;
 }
 
+.fav-icon:hover {
+  cursor: pointer;
+}
+
 /* HEADER */
 
 header div:first-child {
