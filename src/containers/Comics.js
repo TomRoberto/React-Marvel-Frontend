@@ -31,24 +31,36 @@ const Comics = () => {
   return isLoading ? (
     <p>Chargement ...</p>
   ) : (
-    <div>
-      <input
-        type="text"
-        value={search}
-        onChange={(event) => {
-          setSearch(event.target.value);
-          setPage(1);
-        }}
-      />
-      {data.results.map((elem, index) => {
-        return (
-          <FicheComic
-            photo={elem.thumbnail.path + "." + elem.thumbnail.extension}
-            name={elem.title}
-            description={elem.description}
-          />
-        );
-      })}
+    <div className="container">
+      <div className="input-search-container">
+        <input
+          className="input-search"
+          placeholder="Rechercher un comics"
+          type="text"
+          value={search}
+          onChange={(event) => {
+            setSearch(event.target.value);
+            setPage(1);
+          }}
+        />
+      </div>
+
+      <div className="fiches-comics">
+        {data.results &&
+          data.results.map((elem, index) => {
+            return (
+              <FicheComic
+                photo={elem.thumbnail.path + "." + elem.thumbnail.extension}
+                name={elem.title}
+                description={elem.description}
+                favable={true}
+                id={elem._id}
+                key={elem._id}
+              />
+            );
+          })}
+      </div>
+
       <FooterPages
         tab={tabNumberOfPages}
         setPage={setPage}

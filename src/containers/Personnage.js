@@ -27,18 +27,21 @@ const Personnage = () => {
   return isLoading ? (
     <p>Chargement ... </p>
   ) : (
-    <div>
-      <div>
-        <h2> {data.name}</h2>
+    <div className="container">
+      <div className="personnage-informations">
+        <h2 className="personnage-name">{data.name}</h2>
         <div>
           <img
             src={data.thumbnail.path + "." + data.thumbnail.extension}
             alt=""
           />
         </div>
-        <p>{data.description}</p>
+        <p className="personnage-description">{data.description}</p>
+        <p className="paragraphe">
+          {data.name} apparaît dans les comics suivants:{" "}
+        </p>
       </div>
-      <div>
+      <div className="fiches-comics">
         {data.comics.map((elem, index) => {
           return (
             <FicheComic
@@ -46,6 +49,8 @@ const Personnage = () => {
               photo={elem.thumbnail.path + "." + elem.thumbnail.extension}
               name={elem.title}
               description={elem.description}
+              favable={true}
+              id={elem._id}
             />
           );
         })}

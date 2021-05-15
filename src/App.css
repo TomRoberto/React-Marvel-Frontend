@@ -1,9 +1,226 @@
 /* Other rules */
 
+/* GENERAL */
+
 .app {
   font-family: "roboto", sans-serif;
 }
 
 .hidden {
   display: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.fav-icons {
+  color: #ee1620;
+  font-size: 20px;
+}
+
+/* HEADER */
+
+header div:first-child {
+  width: 100%;
+}
+
+header div:first-child img {
+  width: 100%;
+}
+header div:last-child {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.link-characters {
+  text-decoration: none;
+  background-color: #ee1620;
+  height: 40px;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  color: black;
+  width: 113px;
+  line-height: 20px;
+}
+
+.link-comics {
+  text-decoration: none;
+  background-color: #4f7948;
+  height: 40px;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  color: black;
+  width: 113px;
+  text-align: center;
+  line-height: 20px;
+}
+
+.link-favorits {
+  text-decoration: none;
+  background-color: #edd688;
+  height: 40px;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  color: black;
+  width: 113px;
+  text-align: center;
+  line-height: 20px;
+}
+
+/* PAGE PERSONNAGES AND COMICS */
+
+.input-search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.input-search {
+  width: 50%;
+  height: 40px;
+  padding-left: 20px;
+  border-radius: 5px;
+  border: solid black 2px;
+}
+
+.fiches-hero,
+.fiches-comics {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fiches-hero > div:not(:nth-child(4n)),
+.fiches-comics > div:not(:nth-child(4n)) {
+  margin-right: 20px;
+}
+
+/* FICHE HERO AND COMICS */
+
+.hero-fiche,
+.comics-fiche {
+  height: 650px;
+  width: calc(25% - ((3 * 20px) / 4));
+  margin-bottom: 30px;
+  border: solid black 1px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.hero-infos,
+.comics-infos {
+  height: 93%;
+  overflow: hidden;
+}
+
+.img-hero-container,
+.img-comics-container {
+  height: 70%;
+}
+
+.img-hero-container img,
+.img-comics-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.heart-div {
+  margin-bottom: 10px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.link-hero {
+  text-decoration: none;
+  color: black;
+}
+.name-hero,
+.name-comics {
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.description-hero,
+.description-comics {
+  text-align: justify;
+  margin-top: 10px;
+  padding: 0 3px;
+  vertical-align: bottom;
+}
+
+/* PAGE PERSONNAGE */
+
+.personnage-informations {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.personnage-name {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.personnage-description {
+  margin-top: 30px;
+  width: 75%;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.paragraphe {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  align-self: flex-start;
+  font-size: 20px;
+}
+
+/* PAGE FAVORIS */
+
+.favoris-p {
+  margin: 40px 0;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.favoris-p-a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.favoris-p-a a {
+  text-decoration: none;
+  color: black;
+}
+
+/* FOOTER */
+
+footer {
+  margin: 40px 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.the-page {
+  background-color: red;
+  border: solid black 2px;
+  border-radius: 5px;
+}
+
+.active-pages {
+  background-color: #edd688;
+  border: solid black 2px;
+  border-radius: 5px;
 }

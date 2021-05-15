@@ -15,7 +15,6 @@ const Personnages = () => {
         const response = await axios.get(
           `http://localhost:4000/personnages?page=${page}&search=${search}`
         );
-        console.log(response.data);
 
         setData(response.data);
         setIsLoading(false);
@@ -34,26 +33,36 @@ const Personnages = () => {
   return isLoading ? (
     <p>Chargement ...</p>
   ) : (
-    <div>
-      <input
-        value={search}
-        onChange={(event) => {
-          setSearch(event.target.value);
-          setPage(1);
-        }}
-        type="text"
-      />
-      {data.results.map((elem, index) => {
-        return (
-          <FicheHero
-            key={elem._id}
-            name={elem.name}
-            description={elem.description}
-            photo={elem.thumbnail.path + "." + elem.thumbnail.extension}
-            id={elem._id}
-          />
-        );
-      })}
+    <div className="container">
+      <div className="input-search-container">
+        <input
+          className="input-search"
+          placeholder="Rechercher un personnage"
+          value={search}
+          onChange={(event) => {
+            setSearch(event.target.value);
+            setPage(1);
+          }}
+          type="text"
+        />
+      </div>
+
+      <div className="fiches-hero">
+        {data.results &&
+          data.results.map((elem, index) => {
+            return (
+              <FicheHero
+                key={elem._id}
+                name={elem.name}
+                description={elem.description}
+                photo={elem.thumbnail.path + "." + elem.thumbnail.extension}
+                id={elem._id}
+                favable={true}
+              />
+            );
+          })}
+      </div>
+
       <FooterPages
         tab={tabNumberOfPages}
         setPage={setPage}
