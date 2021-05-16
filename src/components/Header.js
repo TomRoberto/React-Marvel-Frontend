@@ -9,13 +9,13 @@ const Header = () => {
       </div>
       <div>
         <Link className="link-characters" to="/">
-          Personnages
+          PERSONNAGES
         </Link>
         <Link className="link-comics" to="/comics">
-          Comics
+          COMICS
         </Link>
         <Link className="link-favorits" to="/favoris">
-          Favoris
+          FAVORIS
         </Link>
       </div>
     </header>
