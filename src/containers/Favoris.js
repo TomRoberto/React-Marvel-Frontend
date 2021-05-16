@@ -5,7 +5,7 @@ import FicheComic from "../components/FicheComic";
 const Favoris = () => {
   let tabCookie1 = Cookies.get("personnages favoris");
   if (tabCookie1) {
-    tabCookie1 = tabCookie1.split("_");
+    tabCookie1 = tabCookie1.split(";_;");
     for (let i = 0; i < tabCookie1.length; i++) {
       tabCookie1[i] = tabCookie1[i].split(";-;");
     }
@@ -13,7 +13,7 @@ const Favoris = () => {
 
   let tabCookie2 = Cookies.get("comics favoris");
   if (tabCookie2) {
-    tabCookie2 = tabCookie2.split("_");
+    tabCookie2 = tabCookie2.split(";_;");
     for (let i = 0; i < tabCookie2.length; i++) {
       tabCookie2[i] = tabCookie2[i].split(";-;");
     }

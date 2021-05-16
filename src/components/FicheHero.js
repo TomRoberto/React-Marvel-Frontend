@@ -11,7 +11,7 @@ const FicheHero = ({ name, description, photo, id, favable }) => {
   const handleClickFav = () => {
     if (Cookies.get("personnages favoris")) {
       let cookie = Cookies.get("personnages favoris");
-      cookie = `${cookie}_${name};-;${description};-;${photo};-;${id}`;
+      cookie = `${cookie};_;${name};-;${description};-;${photo};-;${id}`;
       Cookies.set("personnages favoris", cookie, { expires: 50000 });
       setIsFav(true);
     } else {
@@ -26,12 +26,12 @@ const FicheHero = ({ name, description, photo, id, favable }) => {
 
   const handleClickUnfav = () => {
     let cookie = Cookies.get("personnages favoris");
-    let cookieTab = cookie.split("_");
+    let cookieTab = cookie.split(";_;");
     const index = cookieTab.indexOf(
       `${name};-;${description};-;${photo};-;${id}`
     );
     cookieTab.splice(index, 1);
-    const newCookie = cookieTab.join("_");
+    const newCookie = cookieTab.join(";_;");
     Cookies.set("personnages favoris", newCookie, { expires: 50000 });
     setIsFav(false);
     if (Cookies.get("personnages favoris") === "") {

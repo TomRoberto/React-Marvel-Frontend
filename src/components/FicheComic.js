@@ -10,7 +10,7 @@ const FicheComic = ({ photo, name, description, favable, id }) => {
   const handleClickFav = () => {
     if (Cookies.get("comics favoris")) {
       let cookie = Cookies.get("comics favoris");
-      cookie = `${cookie}_${name};-;${description};-;${photo};-;${id}`;
+      cookie = `${cookie};_;${name};-;${description};-;${photo};-;${id}`;
       Cookies.set("comics favoris", cookie, { expires: 50000 });
       setIsFav(true);
     } else {
@@ -27,12 +27,12 @@ const FicheComic = ({ photo, name, description, favable, id }) => {
 
   const handleClickUnfav = () => {
     let cookie = Cookies.get("comics favoris");
-    let cookieTab = cookie.split("_");
+    let cookieTab = cookie.split(";_;");
     const index = cookieTab.indexOf(
       `${name};-;${description};-;${photo};-;${id}`
     );
     cookieTab.splice(index, 1);
-    const newCookie = cookieTab.join("_");
+    const newCookie = cookieTab.join(";_;");
     Cookies.set("comics favoris", newCookie, { expires: 50000 });
     setIsFav(false);
     if (Cookies.get("comics favoris") === "") {
