@@ -60,7 +60,7 @@ const FicheComic = ({ photo, name, description, favable, id }) => {
         <div className="img-comics-container">
           <img src={photo} alt="" />
         </div>
-        {description !== null && (
+        {description !== "null" && (
           <p className="description-comics">{description}</p>
         )}
       </div>
