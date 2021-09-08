@@ -7,6 +7,11 @@
   background-color: rgb(51, 51, 71);
 }
 
+.loader {
+  height: calc(100vh - 100px);
+  padding-left: 200px;
+}
+
 .hidden {
   display: none;
 }
@@ -68,6 +73,9 @@ header div:last-child {
   font-weight: bold;
   border: black solid 2px;
 }
+.link-characters:active {
+  transform: scale(0.98);
+}
 
 .link-comics {
   text-decoration: none;
@@ -83,6 +91,9 @@ header div:last-child {
   line-height: 20px;
   font-weight: bold;
   border: black solid 2px;
+}
+.link-comics:active {
+  transform: scale(0.98);
 }
 
 .link-favorits {
@@ -100,7 +111,9 @@ header div:last-child {
   font-weight: bold;
   border: black solid 2px;
 }
-
+.link-favorits:active {
+  transform: scale(0.98);
+}
 /* PAGE PERSONNAGES AND COMICS */
 
 .input-search-container {

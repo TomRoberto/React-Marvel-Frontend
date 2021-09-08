@@ -25,7 +25,7 @@ const Personnage = () => {
     fetchData();
   }, []);
   return isLoading ? (
-    <p>Chargement ... </p>
+    <p className="loader">Chargement ... </p>
   ) : (
     <div className="container">
       <div className="personnage-informations">

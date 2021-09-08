@@ -31,7 +31,7 @@ const Personnages = () => {
     tabNumberOfPages.push(0);
   }
   return isLoading ? (
-    <p>Chargement ...</p>
+    <p className="loader">Chargement ...</p>
   ) : (
     <div className="container">
       <div className="input-search-container">
