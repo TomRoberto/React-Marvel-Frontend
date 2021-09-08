@@ -47,10 +47,12 @@ header div:first-child {
   background-color: #ee1620;
   width: 100%;
   border: solid black 2px;
+  box-sizing: border-box;
 }
 
 header div:first-child img {
   width: 30%;
+  box-sizing: border-box;
 }
 header div:last-child {
   display: flex;
@@ -235,7 +237,7 @@ header div:last-child {
   width: 100%;
 }
 .img-perso-container {
-  height: 1000px;
+  height: 800px;
 }
 
 .personnage-name {
