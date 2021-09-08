@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <header>
-      <div>
+      <div className="marvel-container">
         <img src={logo} alt="logo marvel" />
       </div>
       <div>

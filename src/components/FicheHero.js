@@ -60,7 +60,9 @@ const FicheHero = ({ name, description, photo, id, favable }) => {
           <div className="img-hero-container">
             <img src={photo} alt="" />
           </div>
-          <div className="description-hero">{description}</div>
+          <div className="description-container">
+            <div className="description-hero">{description}</div>
+          </div>
         </Link>
       </div>
     </div>

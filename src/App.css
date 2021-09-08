@@ -29,11 +29,19 @@
 /* HEADER */
 
 header div:first-child {
+}
+
+.marvel-container {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #ee1620;
+  width: 100%;
+  border: solid black 2px;
 }
 
 header div:first-child img {
-  width: 100%;
+  width: 30%;
 }
 header div:last-child {
   display: flex;
@@ -44,46 +52,49 @@ header div:last-child {
 
 .link-characters {
   text-decoration: none;
-  background-color: pink;
+  background-color: #ee1620;
   height: 40px;
   border-radius: 5px;
   padding: 10px;
   box-sizing: border-box;
-  color: black;
+  color: white;
   width: 213px;
   text-align: center;
   line-height: 20px;
   font-weight: bold;
+  border: black solid 2px;
 }
 
 .link-comics {
   text-decoration: none;
-  background-color: pink;
+  background-color: #ee1620;
   height: 40px;
   border-radius: 5px;
   padding: 10px;
   box-sizing: border-box;
-  color: black;
+  color: white;
   width: 213px;
   text-align: center;
 
   line-height: 20px;
   font-weight: bold;
+  border: black solid 2px;
 }
 
 .link-favorits {
   text-decoration: none;
-  background-color: pink;
+  background-color: #ee1620;
   height: 40px;
   border-radius: 5px;
   padding: 10px;
   box-sizing: border-box;
-  color: black;
+  color: white;
   width: 213px;
   text-align: center;
 
   line-height: 20px;
   font-weight: bold;
+  border: black solid 2px;
 }
 
 /* PAGE PERSONNAGES AND COMICS */
@@ -124,17 +135,21 @@ header div:last-child {
   box-sizing: border-box;
   border-radius: 10px;
   background-color: wheat;
+  border: solid black 2px;
+  overflow: scroll;
+  /* padding-bottom: 10px; */
 }
 
 .hero-infos,
 .comics-infos {
   height: 93%;
-  overflow: hidden;
 }
 
 .img-hero-container,
 .img-comics-container {
   height: 70%;
+  border-top: solid black 2px;
+  border-bottom: solid black 2px;
 }
 
 .img-hero-container img,
@@ -148,6 +163,7 @@ header div:last-child {
   margin-bottom: 10px;
   margin-top: 5px;
   text-align: center;
+  /* border-bottom: solid black 2px; */
 }
 
 .link-hero {
@@ -166,8 +182,15 @@ header div:last-child {
 .description-comics {
   text-align: justify;
   margin-top: 10px;
-  padding: 0 3px;
-  vertical-align: bottom;
+  padding: 0 10px;
+  /* vertical-align: bottom; */
+  /* border: #ee1620 solid 1px; */
+  /* overflow: scroll; */
+  /* height: 20%; */
+}
+
+.description-container {
+  height: 25%;
 }
 
 /* PAGE PERSONNAGE */
@@ -177,6 +200,7 @@ header div:last-child {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: white;
 }
 
 .personnage-name {
@@ -197,6 +221,9 @@ header div:last-child {
   margin-bottom: 20px;
   align-self: flex-start;
   font-size: 20px;
+}
+.paragraphe span {
+  font-weight: bold;
 }
 
 /* PAGE FAVORIS */

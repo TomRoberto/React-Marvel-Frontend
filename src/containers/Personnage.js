@@ -38,7 +38,7 @@ const Personnage = () => {
         </div>
         <p className="personnage-description">{data.description}</p>
         <p className="paragraphe">
-          {data.name} apparaît dans les comics suivants:{" "}
+          <span>{data.name}</span> apparaît dans les comics suivants:{" "}
         </p>
       </div>
       <div className="fiches-comics">
