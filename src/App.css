@@ -28,6 +28,10 @@
 
 /* HEADER */
 
+header {
+  box-sizing: border-box;
+}
+
 header div:first-child {
 }
 
@@ -111,6 +115,10 @@ header div:last-child {
   padding-left: 20px;
   border-radius: 5px;
   border: solid black 2px;
+  outline: none;
+}
+.input-search:focus {
+  border: solid red 2px;
 }
 
 .fiches-hero,
@@ -138,6 +146,11 @@ header div:last-child {
   border: solid black 2px;
   overflow: scroll;
   /* padding-bottom: 10px; */
+}
+
+.hero-fiche:hover,
+.comics-fiche:hover {
+  cursor: pointer;
 }
 
 .hero-infos,
@@ -201,6 +214,15 @@ header div:last-child {
   flex-direction: column;
   align-items: center;
   color: white;
+}
+
+.personnage-informations img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.img-perso-container {
+  height: 1000px;
 }
 
 .personnage-name {

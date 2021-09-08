@@ -30,7 +30,10 @@ const Personnage = () => {
     <div className="container">
       <div className="personnage-informations">
         <h2 className="personnage-name">{data.name}</h2>
-        <div>
+        <div
+          style={{ border: "black solid 2px" }}
+          className="img-perso-container"
+        >
           <img
             src={data.thumbnail.path + "." + data.thumbnail.extension}
             alt=""
