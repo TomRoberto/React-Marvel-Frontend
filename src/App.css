@@ -310,3 +310,43 @@ footer span {
 .active-pages:hover {
   cursor: pointer;
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1100px) {
+  .hero-fiche,
+  .comics-fiche {
+    width: calc(33% - ((2 * 20px) / 3));
+    /* padding-bottom: 10px; */
+  }
+
+  .fiches-hero > div:not(:nth-child(4n)),
+  .fiches-comics > div:not(:nth-child(4n)) {
+    margin-right: 0px;
+  }
+  .fiches-hero > div:not(:nth-child(3n)),
+  .fiches-comics > div:not(:nth-child(3n)) {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-fiche,
+  .comics-fiche {
+    width: calc(50% - ((1 * 20px) / 2));
+    /* padding-bottom: 10px; */
+  }
+
+  .fiches-hero > div:not(:nth-child(4n)),
+  .fiches-comics > div:not(:nth-child(4n)) {
+    margin-right: 0px;
+  }
+  .fiches-hero > div:not(:nth-child(3n)),
+  .fiches-comics > div:not(:nth-child(3n)) {
+    margin-right: 0px;
+  }
+  .fiches-hero > div:not(:nth-child(2n)),
+  .fiches-comics > div:not(:nth-child(2n)) {
+    margin-right: 20px;
+  }
+}
